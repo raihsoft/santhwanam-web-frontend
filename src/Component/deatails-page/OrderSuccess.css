@@ -1,0 +1,103 @@
+.order-success-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: #f4f6f9;
+  min-height: 100vh;
+}
+
+.receipt-card {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.receipt-card:hover {
+  transform: translateY(-4px);
+}
+
+.success-message {
+  color: #28a745;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.order-number {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.receipt-box {
+  text-align: left;
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: black;
+}
+
+.download-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+  background: #0056b3;
+}
+
+
+/* back button */
+
+.back-btn {
+  margin-top: 15px;
+  background: #4188A8 !important;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+
+
+}
+
+.back-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  /* background: blue !important; */
+}
+
+
+
+.receipt-top-url {
+  text-align: center;
+  font-size: 0.75rem;
+  color: gray;
+  margin-bottom: 5px;
+}
+
+.receipt-bottom-url {
+  text-align: center;
+  font-size: 0.75rem;
+  color: gray;
+  margin-top: 10px;
+}
