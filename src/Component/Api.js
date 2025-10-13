@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const BASE_URL = "https://staging-api.raihsuite.com/v1/"; // your backend base URL
-// const BASE_URL = "https://api.raihsuite.com/v1/"; // your backend base URL
+// const BASE_URL = "https://staging-api.raihsuite.com/v1/"; // your backend base URL
+const BASE_URL = "https://api.raihsuite.com/v1/"; // your backend base URL
 
 const api = axios.create({
   baseURL: BASE_URL,

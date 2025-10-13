@@ -271,7 +271,7 @@ const Trandingpage = () => {
         {/* Left Sidebar - Zones */}
 
         {/* Right - Leaderboard */}
-        <div className="leaderboard-container">
+        <div className="leaderboard-container1">
           <h2 className="leaderboard-subtitle">
             <p style={{ display: "flex" }}>Together we achieved</p>
             <div className="spacer-1">

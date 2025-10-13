@@ -91,7 +91,7 @@ const fetchClubs = async () => {
           club.organization_name.toLowerCase() !== "unknown" &&
           club.is_active === true
       )
-      .sort((a, b) => b.delivered_count - a.delivered_count);
+      .sort((a, b) => a.delivered_count - b.delivered_count);
 
     setClubs(cleaned.slice(0, 100));
   } catch (err) {
@@ -246,7 +246,7 @@ const fetchClubs = async () => {
       <div className="leaderboard-container">
         <div
           style={{
-            background: "linear-gradient(90deg, #287e0eff, #6f7cecff)",
+            background: "linear-gradient(90deg, #06255eff, #6f7cecff ,#dfe2deff,)",
             borderRadius: "20px",
             padding: "30px 20px",
             color: "white",
@@ -277,7 +277,7 @@ const fetchClubs = async () => {
               display: "flex",
               justifyContent: "center",
               alignItems: "flex-end",
-              gap: "10px",
+              
             }}
           >
             <p
@@ -290,13 +290,15 @@ const fetchClubs = async () => {
             >
               {totalDelivered}
             </p>
-            <p
+            <p className="ltr-text"
               style={{
                 fontSize: "25px",
                 marginTop: "75px",
                 marginLeft: "5px",
                 color: "white",
+                marginBottom:"22px"
               }}
+              
             >
               LTR
             </p>
@@ -324,7 +326,7 @@ const fetchClubs = async () => {
                     ? ((totalDelivered / totalApproved) * 100).toFixed(2)
                     : 0
                 }%`,
-                background: "#FcD700",
+                background: "#ffffffff",
                 borderRadius: "10px 0 0 10px",
                 transition: "width 0.5s ease-in-out",
               }}
@@ -342,11 +344,11 @@ const fetchClubs = async () => {
               fontSize: "25px",
             }}
           >
-            <p>
+            <p className="bottom-info">
               Current Stock: <b>{(totalStock || 0) - (totalDelivered || 0)}</b>{" "}
-              LTR
+              <p  className ="ltr-text">LTR</p>
             </p>
-            <p>
+            <p className="bottom-info-1" >
               Delivery Percentage:{" "}
               <b>
                 {totalApproved > 0
@@ -367,7 +369,7 @@ const fetchClubs = async () => {
             return (
               <div key={club.id} className="table-row">
                 <span className="name">
-                  <span style={{ color: "black" }}>#{rank}</span>{" "}
+               
                   {club.organization_name}
                 </span>
                 <div

@@ -22,6 +22,8 @@ export default function Datapage() {
   const [visibleOrders, setVisibleOrders] = useState([]); // paginated data
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+  const [fullResponse, setFullResponse] = useState(null);
+
 
   // Redirect if opened directly without org data
   useEffect(() => {
@@ -49,6 +51,9 @@ export default function Datapage() {
       setTotalPages(Math.ceil(ordersArr.length / PAGE_SIZE));
       setCurrentPage(1);
 
+      setFullResponse(data); // store full backend data
+
+
       // Show first page
       setVisibleOrders(ordersArr.slice(0, PAGE_SIZE));
 
@@ -60,7 +65,7 @@ export default function Datapage() {
       );
       setErrorMessage(
         err.response?.data?.message ||
-          "Failed to fetch orders. Please try again."
+        "Failed to fetch orders. Please try again."
       );
     } finally {
       setLoading(false);
@@ -100,32 +105,52 @@ export default function Datapage() {
       setCurrentPage(prevPage);
     }
   };
-// print function
+  // print function
   const handlePrint = (order) => {
+    const orgName = fullResponse?.organization_name || order.organization_name || selectedOrgName;
+
     const printContent = `
-    <div style="font-family: Arial; padding: 20px;">
-      <h2 style="text-align:center;">Order Receipt</h2>
-      <hr/>
-      <p><strong>Order Number:</strong> ${order.order_number}</p>
-      <p><strong>Name:</strong> ${order.order_by_name}</p>
-      <p><strong>Mobile:</strong> ${order.mobile}</p>
-      <p><strong>Quantity:</strong> ${order.quantity}</p>
-      <p><strong>Place:</strong> ${order.delivery_place}</p>
-      <hr/>
-      <p style="text-align:center;">Thank you for your order!</p>
-    </div>
+<h5 style="text-align:center; font-size:15px; font-weight:bold; margin:0 0 2px 0;">മധുര സാന്ത്വനം - 2025</h5>
+<h5 style="text-align:center; font-size:10px; margin:0 0 3px 0;">പാണ്ടിക്കാട് പാലിയേറ്റീവ് പായസ ചലഞ്ച്</h5>
+
+<div style="font-family: Arial; padding:10px; line-height:1;">
+  <h2 style="text-align:center; margin:0 0 2px 0;">Delivery Slip</h2>
+  <hr style="margin: 5px 0;"/>
+  <p style="text-align:center; margin: 3px 0;"><strong>${orgName}</strong></p>
+  <p style="text-align:center; margin: 3px 0;"><strong>${order.delivery_place}</strong></p>
+  <p style="text-align:center; margin: 3px 0;">Mob: <strong>${order.mobile}</strong></p>
+  <p style="text-align:center; margin: 3px 0; font-size:25px">No: <strong>${order.order_number}</strong></p>
+  <p style="text-align:center; margin: 3px 0;">
+    Qty:
+    <span style="
+      display:inline-block;
+      padding: 5px 15px;
+      margin-left:10px;
+      border:2px solid #000;
+      font-size: 1.8em;
+      font-weight:bold;
+      min-width:50px;
+      text-align:center;
+    ">
+      ${order.quantity}
+    </span>
+  </p>
+  <hr style="margin: 5px 0;"/>
+  <p style="text-align:center; font-size:14px; margin:3px 0;">Thanks for your order!</p>
+  <p style="text-align:center; font-size:14px; margin:3px 0;">www.raihsoft.com</p>
+</div>
+
   `;
 
     const printWindow = window.open("", "", "width=800,height=600");
-    printWindow.document.write(
-      "<html><head><title>Order Receipt</title></head><body>"
-    );
+    printWindow.document.write("<html><head><title>Order Receipt</title></head><body>");
     printWindow.document.write(printContent);
     printWindow.document.write("</body></html>");
     printWindow.document.close();
     printWindow.print();
   };
-// print function end
+
+  // print function end
 
 
   return (

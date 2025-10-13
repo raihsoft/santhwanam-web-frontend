@@ -317,12 +317,12 @@ const Index = () => {
 
           {/* Order Now Button */}
           <div className="order-now-btn d-flex gap-3 position-absolute bottom-1 start-50 translate-middle-x mb-4">
-            <a
+            {/* <a
               href="/Payasa-challenge-2025-orderform-pandikkad-palliative"
               className="order-btn-1"
-            >
+            > 
               Order Now
-            </a>
+            </a> */}
             <a
               href="/Pandikkad-santhwanam-palliative-payasa-challenge-trending-now"
               className="order-btn"
