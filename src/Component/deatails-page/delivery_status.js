@@ -5,6 +5,7 @@ import { apiCall } from "../Api";
 import { IoMdDownload } from "react-icons/io";
 import { CiMenuKebab } from "react-icons/ci";
 import { FaLock } from "react-icons/fa";
+import OdometerCounter from "../odometer/odometer-counter";
 
 const LIST_ENDPOINT = "order/organizations";
 const STATUS_ENDPOINT = "order/order_status/";
@@ -39,8 +40,9 @@ const Delivery_status = () => {
     const interval = setInterval(() => {
       fetchClubs();
       fetchTotals();
-    }, 30000);
+    }, 5000);
     return () => clearInterval(interval);
+    
   }, []);
 
   const fetchAllPages = async (endpoint) => {
@@ -58,7 +60,7 @@ const Delivery_status = () => {
   };
 
 const fetchClubs = async () => {
-  setLoading(true);
+  // setLoading(true);
   setError(null);
   try {
     const clubsList = await fetchAllPages(LIST_ENDPOINT);
@@ -230,11 +232,11 @@ const fetchClubs = async () => {
       {/* Navbar End */}
 
       {/* Loading */}
-      {loading && (
+      {/* {loading && (
         <div className="loading-overlay">
           <div className="spinner"></div>
         </div>
-      )}
+      )} */}
 
       {/* Header */}
       <div className="leaderboard-subtitle-header">
@@ -280,7 +282,7 @@ const fetchClubs = async () => {
               
             }}
           >
-            <p
+            {/* <p
               style={{
                 fontSize: "5rem",
                 fontWeight: "700",
@@ -288,9 +290,17 @@ const fetchClubs = async () => {
                 marginBottom: 0,
               }}
             >
-              {totalDelivered}
-            </p>
-            <p className="ltr-text"
+              {totalDelivered} 
+            </p> */}
+             <OdometerCounter
+            value={totalDelivered}
+            // prefix="Delivered "
+            suffix="LTR"
+            minDigits={5}
+            durationMs={650}
+            easing="cubic-bezier(0.2, 0.8, 0.2, 1)"
+          />
+            {/* <p className="ltr-text"
               style={{
                 fontSize: "25px",
                 marginTop: "75px",
@@ -301,7 +311,7 @@ const fetchClubs = async () => {
               
             >
               LTR
-            </p>
+            </p> */}
           </div>
 
           {/* Delivery Percentage Bar */}

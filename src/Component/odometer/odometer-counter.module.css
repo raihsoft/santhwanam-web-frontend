@@ -1,0 +1,65 @@
+/* styles for odometer counter with modern, token-aware design */
+
+.odometer {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  color: var(--color-foreground);
+  font-variant-numeric: tabular-nums;
+}
+
+.digits {
+  display: inline-flex;
+  gap: 0.25rem;
+  padding: 0.375rem 0.5rem;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 1px 0 0 var(--color-border) inset;
+}
+
+.digit {
+  position: relative;
+  display: inline-flex;
+  width: 0.8em; /* keep digits compact and monospaced */
+  height: 1.4em; /* used with overflow hidden window */
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background: color-mix(in oklch, var(--color-card) 80%, var(--color-muted) 20%);
+  color: #FcD700;
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.column {
+  display: inline-flex;
+  flex-direction: column;
+  /* Animation controlled via CSS variables set inline on wrapper */
+  transition: transform var(--odometer-duration, 600ms) var(--odometer-easing, cubic-bezier(0.22, 1, 0.36, 1));
+  will-change: transform;
+}
+
+.slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Ensure consistent slot height; line-height makes height measurement stable */
+  line-height: 1.4;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-shadow: 0 1px 0 color-mix(in oklch, var(--color-card) 70%, var(--color-muted) 30%);
+}
+
+.separator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 0.6em;
+  color: var(--color-muted-foreground);
+  opacity: 0.9;
+}
+
+.affix {
+  color: var(--color-muted-foreground);
+  font-weight: 500;
+}
