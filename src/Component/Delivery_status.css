@@ -1,0 +1,11 @@
+.leaderboard-subtitle-1{
+ /* background-color: #ff1a1a; */
+ background: linear-gradient( 135deg, #000000 0%, #2bdfff 100%);
+  margin-bottom: 20px;
+ padding: 10px;
+ border-radius: 15px;
+ color: #fff;
+  font-size: 1.2rem;
+  height: 175px;
+  font-family: revert;
+}

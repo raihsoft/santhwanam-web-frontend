@@ -1,15 +1,12 @@
-/* Load Malayalam Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Manjari:wght@400;700&family=Noto+Sans+Malayalam:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee+Spice&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee+Spice&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee+Spice&family=Frijole&family=Nabla&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee+Spice&family=Frijole&family=Fugaz+One&family=Nabla&display=swap');
+
 .clubb-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background: linear-gradient(180deg, #ffffff);
   font-family: 'Noto Sans Malayalam', 'Manjari', sans-serif;
   padding: 20px;
@@ -65,7 +62,7 @@
 /* Big Number */
 .big-number {
   font-family: auto;
-  font-size: clamp(2.5rem, 12vw, 5rem);
+  font-size: clamp(2.5rem, 12vw, 7rem);
   font-weight: 900;
   color: #fcd700;
   text-shadow: 2px 2px 5px rgba(1, 1, 1, 0.8),
@@ -131,7 +128,7 @@
     font-size: 1rem;
   }
   .big-number {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
   .download-btn {
     width: 40%;
@@ -148,13 +145,13 @@
     font-size: 2.2rem;
   }
   .big-number {
-    font-size: 5rem;
+    font-size: 6rem;
   }
 }
 
 @media (max-width: 560px) {
   .big-number{
-    font-size: 4rem;
+    font-size: 5rem;
   }
   .org-name {
     font-size: 2.1rem;
@@ -166,7 +163,7 @@
     font-size: 1.8rem;
   }
   .big-number{
-    font-size: 4.5rem;
+    font-size: 5.5rem;
   }
   
 }
@@ -210,11 +207,116 @@
     font-size: 1.2rem;
   }
   .big-number{
-    font-size: 2.8rem;
-  }
-  
+    font-size: 3rem;
+ }
 }
 
+
+.leaderboard-subtitle-headers{
+ /* background-color: #ff1a1a; */
+ background: linear-gradient( 135deg, #3cad00 0%,#fff, #1062d5 100%);
+  margin-bottom: 20px;
+ padding: 10px;
+ color: #fff;
+  font-size: 1.2rem;
+  height: 110px;
+  text-align: center;
+  font-family: revert;
+}
+
+@media (max-width: 857px){
+  .leaderboard-subtitle-headers h1{
+    font-size: 2rem;
+  }
+  .leaderboard-subtitle-headers h2{
+    font-size: 1.5rem;
+  }
+  .leaderboard-subtitle-headers{
+    height: 100px;
+  }
+}
+@media (max-width: 789px){
+  .leaderboard-subtitle-headers h1{
+    font-size: 1.9rem;
+  }
+  .leaderboard-subtitle-headers h2{
+    font-size: 1.4rem;
+  }
+  .leaderboard-subtitle-headers{
+    height: 90px;
+  }
+}
+@media (max-width: 751px){
+  .leaderboard-subtitle-headers h1{
+    font-size: 1.7rem;
+  }
+  .leaderboard-subtitle-headers h2{
+    font-size: 1.3rem;
+  }
+  .leaderboard-subtitle-headers{
+    height: 80px;
+  }
+}
+@media (max-width: 674px){
+  .leaderboard-subtitle-headers h1{
+    font-size: 1.5rem;
+  }
+  .leaderboard-subtitle-headers h2{
+    font-size: 1.1rem;
+  }
+  .leaderboard-subtitle-headers{
+    height: 70px;
+  }
+}
+@media (max-width: 597px){
+  .leaderboard-subtitle-headers h1{
+    font-size: 1.3rem;
+  }
+  .leaderboard-subtitle-headers h2{
+    font-size: 1rem;
+  }
+  .leaderboard-subtitle-headers{
+    height: 70px;
+  }
+}
+@media (max-width: 520px){
+  .leaderboard-subtitle-headers h1{
+    font-size: 1.1rem;
+  }
+  .leaderboard-subtitle-headers h2{
+    font-size: 0.90rem;
+  }
+  .leaderboard-subtitle-headers{
+    height: 60px;
+  }
+}
+@media (max-width: 443px){
+  .leaderboard-subtitle-headers h1{
+    font-size: 0.90rem;
+  }
+  .leaderboard-subtitle-headers h2{
+    font-size: 0.85rem;
+  }
+  .leaderboard-subtitle-headers{
+    height: 60px;
+  }
+}
+@media (max-width: 366px){
+  .leaderboard-subtitle-headers h1{
+    font-size: 0.80rem;
+  }
+  .leaderboard-subtitle-headers h2{
+    font-size: 0.75rem;
+  }
+  .leaderboard-subtitle-headers{
+    height: 40px;
+  }
+}
+@media (max-width: 371px){
+  .leaderboard-subtitle-headers{
+    height: 60px;
+  }
+}
 
 
 /* Overlay Text */
@@ -233,14 +335,14 @@
 .top-text {
   top: 1%;
   color: rgba(214, 206, 206, 0.8);
-  font-size: 1.5vw; /* responsive to viewport width */
+  font-size: 14px; /* responsive to viewport width */
 }
 
 /* Bottom Text */
 .bottom-text {
   bottom: 1%;
   color: grey;
-  font-size: 1.2vw; /* responsive to viewport width */
+  font-size: 14px; /* responsive to viewport width */
 }
 
 /* Responsive Adjustments */
@@ -270,6 +372,3 @@
     font-size: 2vw;
   }
 }
-
-
-

@@ -1,0 +1,423 @@
+.data-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+Popup overlay .order-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Popup content */
+.order-popup-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.order-popup-content h3 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.order-popup-content p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Form input */
+.order-popup-content input {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.order-popup-content input:focus {
+  border-color: #007bff;
+}
+
+/* Error message */
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+.order-popup-content button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.order-popup-content button:hover {
+  background-color: #0056b3;
+}
+
+/* Orders table */
+.table-container {
+  margin: 30px auto;
+  max-width: 1000px;
+  padding: 0 15px;
+}
+
+.table-wrapper {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.table-header h1 {
+  margin-bottom: 5px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.table-header p {
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+table.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table.table th,
+table.table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eaeaea;
+}
+
+table.table th {
+  background-color: #f8f9fa;
+  color: #333;
+  font-weight: 600;
+}
+
+table.table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .order-popup-content {
+    width: 90%;
+  }
+
+  table.table th,
+  table.table td {
+    padding: 10px;
+  }
+}
+
+/* Datapage.css */
+
+/* Popup styling */
+.order-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* for Safari support */
+}
+
+.order-popup-content {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  width: 350px;
+  text-align: center;
+}
+
+.order-popup-content h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.order-popup-content input {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 10px 0 15px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  text-align: center;
+}
+
+.order-popup-content button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.order-popup-content button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: red;
+  margin: -10px 0 10px 0;
+  font-size: 14px;
+}
+
+/* Orders table styling */
+/* Heading styling */
+/* Heading styling */
+.h2-head {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Container for table */
+.orders-table-container {
+  padding: 20px;
+}
+
+/* Orders table styling */
+table {
+  width: 90%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+  background-color: #007bff;
+  color: #fff;
+}
+
+thead th {
+  padding: 12px 10px;
+  font-weight: 600;
+  text-align: center;
+}
+
+tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+tbody td {
+  padding: 12px 10px;
+  text-align: center;
+  font-size: 15px;
+  color: #333;
+}
+
+tbody tr:hover {
+  background-color: #e0f0ff;
+}
+
+td[colspan="5"] {
+  text-align: center;
+  padding: 20px;
+  font-weight: 500;
+  color: #555;
+}
+
+/* Responsive adjustments for mobile */
+@media screen and (max-width: 768px) {
+  .orders-table-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  table {
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  thead th,
+  tbody td {
+    padding: 10px 5px;
+    font-size: 14px;
+  }
+
+  .h2-head {
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+.pagination-controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination-controls button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.pagination-controls button:hover {
+  background-color: #0056b3;
+}
+
+.pagination-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Fix header & footer width issues on mobile */
+.navbar,
+.bg-light,
+footer,
+section.bg-dark {
+  width: 100% !important;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Make sure container-fluid elements stretch fully */
+.container-fluid {
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Ensure footer always spans full screen width */
+section.bg-dark {
+  display: block;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* On small screens, prevent horizontal scroll */
+@media (max-width: 768px) {
+  body,
+  html {
+    overflow-x: hidden;
+  }
+
+  .data-page {
+    padding: 0;
+    margin: 0;
+  }
+
+  nav.navbar {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* Ensure order list is scrollable and visible on mobile */
+.table-scroll-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent cutoff on small screens */
+.orders-table-container {
+  overflow: visible;
+}
+
+/* Fix for mobile layout — ensure you can scroll horizontally */
+@media (max-width: 768px) {
+  .table-scroll-wrapper {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 800px; /* ensures all columns visible by horizontal scroll */
+  }
+
+  body,
+  html {
+    overflow-x: hidden;
+  }
+
+  .data-page {
+    overflow-x: hidden;
+  }
+}
+
+
+
+/* print function  */
+
+body {
+  font-family: "Arial";
+}
+h2 {
+  margin-bottom: 10px;
+}
+p {
+  margin: 5px 0;
+}
+hr {
+  border: 1px solid #000;
+  margin: 10px 0;
+}

@@ -652,7 +652,7 @@ function SubmitForm() {
                   <input
                     type="text"
                     id="zone"
-                    name="zone"
+                    name="zone_name"
                     value={
                       mekhalOptions.find(
                         (z) => String(z.id) === String(selectedZone)
