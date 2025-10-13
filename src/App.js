@@ -19,6 +19,7 @@ import Trandingpage from "./Component/deatails-page/Trandingpage";
 import Statuscount from "./Component/deatails-page/Statuscount";
 import Datapage from "./Component/deatails-page/Datapage";
 import Delivery_status from "./Component/deatails-page/delivery_status";
+import TVDeliveryStatus from "./Component/deatails-page/TVDeliveryStatus";
 // import OrderReceipt from './Component/deatails-page/reciept';
 
 // import MainEffects from './Component/MainEffects';
@@ -58,7 +59,11 @@ function App() {
         />
         <Route path="/Statuscount/:id" element={<Statuscount />} />
         <Route path="/Datapage" element={<Datapage />} />
-        <Route path="/Pandikkad-santhwanam-palliative-payasa-challenge-delivery-status" element={<Delivery_status />} />
+        <Route
+          path="/Pandikkad-santhwanam-palliative-payasa-challenge-delivery-status"
+          element={<Delivery_status />}
+        />
+        <Route path="/tv-display" element={<TVDeliveryStatus />} />
       </Routes>
     </Router>
   );
