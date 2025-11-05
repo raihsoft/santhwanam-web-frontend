@@ -6,7 +6,7 @@
 
 .hero-banner {
   position: relative;
-  background: url("/public/img/palada.jpg") center/cover no-repeat;
+  /* background: url("/public/img/palada.jpg") center/cover no-repeat; */
   height: 180px;
   display: flex;
   align-items: center;

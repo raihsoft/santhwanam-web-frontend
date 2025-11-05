@@ -51,13 +51,12 @@ const Index = () => {
   return (
     <div>
       {/* ✅ Popup Modal */}
-{showPopup && (
+      {/* {showPopup && (
   <div className="popup-overlay">
     <div
       className="popup-content"
       style={{ backgroundImage: "url(/img/popup.jpeg)" }}
     >
-      {/* Header with close button */}
       <div className="popup-header">
         <button
           className="popup-close"
@@ -67,7 +66,6 @@ const Index = () => {
         </button>
       </div>
 
-      {/* Order Button */}
       <Link
         to="/Payasa-challenge-2025-orderform-pandikkad-palliative"
         className="btn btn-primary mt-3"
@@ -76,8 +74,7 @@ const Index = () => {
       </Link>
     </div>
   </div>
-)}
-
+)} */}
 
       {/* Spinner Start */}
       {/* <div id="spinner" className="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -149,7 +146,10 @@ const Index = () => {
             <Link to="/about" className="nav-item nav-link">
               About
             </Link>
-            <Link to="/Donate-for-pandikkad-santhwanam-palliative-care-society" className="nav-item nav-link">
+            <Link
+              to="/Donate-for-pandikkad-santhwanam-palliative-care-society"
+              className="nav-item nav-link"
+            >
               Donation
             </Link>
             <Link to="/gallery" className="nav-item nav-link">
@@ -317,11 +317,23 @@ const Index = () => {
 
           {/* Order Now Button */}
           <div className="order-now-btn d-flex gap-3 position-absolute bottom-1 start-50 translate-middle-x mb-4">
-            <a href="/Payasa-challenge-2025-orderform-pandikkad-palliative" className="order-btn-1">
+            {/* <a
+              href="/Payasa-challenge-2025-orderform-pandikkad-palliative"
+              className="order-btn-1"
+            > 
               Order Now
-            </a>
-            <a href="/Pandikkad-santhwanam-palliative-payasa-challenge-trending-now" className="order-btn">
+            </a> */}
+            <a
+              href="/Pandikkad-santhwanam-palliative-payasa-challenge-trending-now"
+              className="order-btn"
+            >
               Trending Now
+            </a>
+            <a
+              href="/Pandikkad-santhwanam-palliative-payasa-challenge-delivery-status"
+              className="delivery-btn"
+            >
+              Delivery Status
             </a>
           </div>
         </div>
@@ -433,7 +445,10 @@ const Index = () => {
                 </div>
                 <h4 className="fw-bold">Our Vision</h4>
                 <p className="fst-italic text-muted mt-2">
-                  “To build a compassionate society where quality palliative care is accessible to all, ensuring that no one suffers alone, and every patient lives with dignity, comfort, and hope until the very end.”
+                  “To build a compassionate society where quality palliative
+                  care is accessible to all, ensuring that no one suffers alone,
+                  and every patient lives with dignity, comfort, and hope until
+                  the very end.”
                 </p>
               </div>
             </div>
@@ -445,7 +460,10 @@ const Index = () => {
                 </div>
                 <h4 className="fw-bold">Our Mission</h4>
                 <p className="fst-italic text-muted mt-2">
-                  “To provide compassionate, holistic, and community-based palliative care that brings dignity, comfort, and relief to patients with chronic and life-limiting illnesses, while extending emotional and social support to their families.”
+                  “To provide compassionate, holistic, and community-based
+                  palliative care that brings dignity, comfort, and relief to
+                  patients with chronic and life-limiting illnesses, while
+                  extending emotional and social support to their families.”
                 </p>
               </div>
             </div>
@@ -536,9 +554,7 @@ const Index = () => {
                   style={{ height: "180px", objectFit: "cover" }}
                 />
                 <div className="card-body">
-                  <h5 className="card-title fw-semibold">
-                    Volunteer Training
-                  </h5>
+                  <h5 className="card-title fw-semibold">Volunteer Training</h5>
                   <p className="text-muted small">
                     Educating community members to provide compassionate care.
                   </p>
@@ -831,65 +847,91 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Milestones Section - Ultra Advanced */}
+      <section className="wow-milestones py-5 bg-light">
+        <div className="container">
+          <div className="text-center mb-5">
+            <h5 className="text-primary text-uppercase fw-semibold">
+              Our Milestones
+            </h5>
+            <h2 className="display-6 fw-bold">Journey Through the Years</h2>
+            <p className="text-muted mx-auto" style={{ maxWidth: "700px" }}>
+              From our humble beginnings to today, every year marks a milestone
+              in providing compassionate care.
+            </p>
+          </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-{/* Milestones Section - Ultra Advanced */}
-<section className="wow-milestones py-5 bg-light">
-  <div className="container">
-    <div className="text-center mb-5">
-      <h5 className="text-primary text-uppercase fw-semibold">Our Milestones</h5>
-      <h2 className="display-6 fw-bold">Journey Through the Years</h2>
-      <p className="text-muted mx-auto" style={{ maxWidth: "700px" }}>
-        From our humble beginnings to today, every year marks a milestone in providing compassionate care.
-      </p>
-    </div>
-
-    <div className="timeline-wow position-relative">
-      {[
-        { year: "2002", desc: "Founded by Dr. Firoz Khan & Ashraf Ibrahim Shah; first clinic inaugurated.", icon: "🏥" },
-        { year: "2008", desc: "Registered as Pain and Palliative Care Trust, strengthening services.", icon: "📜" },
-        { year: "2009", desc: "First ambulance purchased, expanding home-care services.", icon: "🚑" },
-        { year: "2012", desc: "Trust expanded with new members, governance strengthened.", icon: "👥" },
-        { year: "2016", desc: "Land purchased for a permanent center at Choorakkavu.", icon: "🌿" },
-        { year: "2017", desc: "Foundation stone laid, construction began with community help.", icon: "🏗️" },
-        { year: "2019", desc: "Trust building inaugurated; gained permanent headquarters.", icon: "🏢" },
-        { year: "2020", desc: "Provided vital care during COVID-19 pandemic.", icon: "🦠" },
-        { year: "2024", desc: "New ambulance purchased after 15 years of service.", icon: "🚑" },
-        { year: "2025", desc: "Expanded services including home care, psychiatry, physiotherapy, dialysis, outpatient support.", icon: "✨" },
-      ].map((m, index) => (
-        <div
-          key={index}
-          className={`timeline-card-wow ${index % 2 === 0 ? "left" : "right"}`}
-          data-aos="fade-up"
-          data-aos-delay={index * 150}
-        >
-          <div className="timeline-dot-wow">{m.icon}</div>
-          <div className="timeline-content-wow p-4 shadow-lg rounded bg-white">
-            <h5 className="fw-bold text-primary mb-2">{m.year}</h5>
-            <p className="text-muted mb-0">{m.desc}</p>
+          <div className="timeline-wow position-relative">
+            {[
+              {
+                year: "2002",
+                desc: "Founded by Dr. Firoz Khan & Ashraf Ibrahim Shah; first clinic inaugurated.",
+                icon: "🏥",
+              },
+              {
+                year: "2008",
+                desc: "Registered as Pain and Palliative Care Trust, strengthening services.",
+                icon: "📜",
+              },
+              {
+                year: "2009",
+                desc: "First ambulance purchased, expanding home-care services.",
+                icon: "🚑",
+              },
+              {
+                year: "2012",
+                desc: "Trust expanded with new members, governance strengthened.",
+                icon: "👥",
+              },
+              {
+                year: "2016",
+                desc: "Land purchased for a permanent center at Choorakkavu.",
+                icon: "🌿",
+              },
+              {
+                year: "2017",
+                desc: "Foundation stone laid, construction began with community help.",
+                icon: "🏗️",
+              },
+              {
+                year: "2019",
+                desc: "Trust building inaugurated; gained permanent headquarters.",
+                icon: "🏢",
+              },
+              {
+                year: "2020",
+                desc: "Provided vital care during COVID-19 pandemic.",
+                icon: "🦠",
+              },
+              {
+                year: "2024",
+                desc: "New ambulance purchased after 15 years of service.",
+                icon: "🚑",
+              },
+              {
+                year: "2025",
+                desc: "Expanded services including home care, psychiatry, physiotherapy, dialysis, outpatient support.",
+                icon: "✨",
+              },
+            ].map((m, index) => (
+              <div
+                key={index}
+                className={`timeline-card-wow ${
+                  index % 2 === 0 ? "left" : "right"
+                }`}
+                data-aos="fade-up"
+                data-aos-delay={index * 150}
+              >
+                <div className="timeline-dot-wow">{m.icon}</div>
+                <div className="timeline-content-wow p-4 shadow-lg rounded bg-white">
+                  <h5 className="fw-bold text-primary mb-2">{m.year}</h5>
+                  <p className="text-muted mb-0">{m.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
+      </section>
 
       {/* How It Works */}
       <section

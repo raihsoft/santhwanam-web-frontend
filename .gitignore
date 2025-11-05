@@ -24,5 +24,31 @@ yarn-error.log*
 
 public/img/
 
-#images
-.png
+/*.png
+/*.jpg
+/*.jpeg
+/*.gif
+/*.svg
+/*.webp
+/*.avif
+/*.ico
+/*.bmp
+/*.tiff
+/*.psd
+/*.raw
+/*.heic
+/*.indd
+/*.ai
+/*.eps
+/*.pdf
+/*.mp4
+/*.mov
+/*.avi
+/*.mkv
+/*.wmv
+/*.flv
+/*.mp3
+/*.wav  
+/*.flac
+/*.aac
+/*.ogg

@@ -1948,6 +1948,7 @@
   color: #fff;
 }
 
+
 /* Tablet (≤ 992px) */
 @media (max-width: 992px) {
   .order-btn {
@@ -2078,9 +2079,38 @@
   color: #fff;
 }
 
+
+/* Buttons default (desktop) */
+.delivery-btn {
+  display: inline-block;
+  padding: 13px 30px;
+  font-size: 23px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 10px;
+  background:#B73C95 ;
+  border: none;
+  box-shadow: 0 6px 15px #2883a776;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.delivery-btn:hover {
+  background: #ff0000cc;
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px #a7282880;
+  color: #fff;
+}
+
+/*  */
 /* Tablet (≤ 992px) */
 @media (max-width: 992px) {
   .order-btn-1 {
+    font-size: 16px;
+    padding: 10px 24px;
+  }
+  .delivery-btn {
     font-size: 16px;
     padding: 10px 24px;
   }
@@ -2088,6 +2118,11 @@
 
 @media (max-width :722px){
   .order-btn-1{
+    font-size: 14px;
+    padding: 10px 24px;
+    
+  }
+  .delivery-btn{
     font-size: 14px;
     padding: 10px 24px;
     
@@ -2101,10 +2136,20 @@
     padding: 10px 24px;
     
   }
+  .delivery-btn {
+    font-size: 12px;
+    padding: 10px 24px;
+    
+  }
 }
 
 @media (max-width :591px){
   .order-btn-1 {
+    font-size: 12px;
+    padding: 10px 24px;
+    
+  }
+  .delivery-btn {
     font-size: 12px;
     padding: 10px 24px;
     
@@ -2116,10 +2161,19 @@
         font-size: 11px;
         padding: 10px 20px;
     }
+    .delivery-btn{
+        font-size: 11px;
+        padding: 10px 20px;
+    }
 }  
 
 @media (max-width :390px){
   .order-btn-1 {
+    font-size: 8px;
+    padding: 10px 12px;
+    
+  }
+  .delivery-btn {
     font-size: 8px;
     padding: 10px 12px;
     
@@ -2132,9 +2186,19 @@
     padding: 10px 20px;
     
   }
+  .delivery-btn {
+    font-size: 10px;
+    padding: 10px 20px;
+    
+  }
 }
 @media (max-width :476px){
   .order-btn-1 {
+    font-size: 10px;
+    padding: 10px 15px;
+    
+  }
+  .delivery-btn {
     font-size: 10px;
     padding: 10px 15px;
     
@@ -2146,9 +2210,19 @@
     padding: 10px 14px;
     /* changed */
   }
+  .delivery-btn {
+    font-size: 9px;
+    padding: 10px 14px;
+    /* changed */
+  }
 }
 @media (max-width :400px){
   .order-btn-1 {
+    font-size: 8px;
+    padding: 10px 13px;
+    
+  }
+  .delivery-btn {
     font-size: 8px;
     padding: 10px 13px;
     
@@ -2160,9 +2234,19 @@
     padding: 10px 12px;
     
   }
+  .delivery-btn {
+    font-size: 8px;
+    padding: 10px 12px;
+    
+  }
 }
 @media (max-width :356px){
   .order-btn-1 {
+    font-size: 7px;
+    padding: 10px 12px;
+    
+  }
+  .delivery-btn {
     font-size: 7px;
     padding: 10px 12px;
     
